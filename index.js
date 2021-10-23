@@ -41,7 +41,7 @@ app.post('/api/email', (req, res, next) => {
 			});
 		})
 		.catch((err) => {
-			console.error(err);
+			res.send(err);
 			res.status(401).json({
 				success: false
 			});
